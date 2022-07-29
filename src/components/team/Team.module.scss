@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.team {
+  // background-color: $light-background;
+  padding: 80px 0;
+}
+
+.team__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.team__text,
+.team__title,
+.team__description {
+  margin-bottom: 24px;
+}
+
+.team__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 24px;
+  padding: 0 28px;
+}

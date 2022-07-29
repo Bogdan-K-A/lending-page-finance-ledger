@@ -1,0 +1,40 @@
+.team__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.team__name {
+  font-size: 25px;
+  line-height: 1.27;
+
+  margin-bottom: 12px;
+}
+
+.team__plase {
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+.team__item_img {
+  margin-bottom: 20px;
+}
+
+.team_item::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background: rgba(228, 228, 232, 0.4);
+  transition: all 0.3ms ease;
+}
+
+.team_item:hover {
+  // background: rgba(228, 228, 232, 0.4);
+
+  // opacity: 0.7;
+  background: rgba(0, 0, 0, 0.4);
+}

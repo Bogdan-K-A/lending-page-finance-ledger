@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.footer__icon_item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.footer__svg {
+  fill: $light-background;
+  svg {
+    transition: 300ms;
+    &:hover {
+      fill: $primary-background-color-hover;
+    }
+  }
+}

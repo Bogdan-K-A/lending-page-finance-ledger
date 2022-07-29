@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.blog__img {
+  width: 680px;
+  height: 460px;
+
+  max-width: none;
+}
+
+.blog__content {
+  // width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 80px 56px 80px 28px;
+
+  background-color: $secondary-background-color-blue;
+}
+
+.blog__text {
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 1.65;
+  color: $light-background;
+}
+
+.blog__title,
+.blog__description {
+  margin-bottom: 24px;
+  color: $light-background;
+}
+
+.blog__title {
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.26;
+}

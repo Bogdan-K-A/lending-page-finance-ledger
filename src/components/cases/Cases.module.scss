@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.cases {
+  // background-color: $light-background;
+  padding: 80px 0;
+}
+
+.cases__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cases__text,
+.cases__title,
+.cases__description {
+  margin-bottom: 24px;
+}
+
+.cases__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 24px;
+  padding: 0 28px;
+}

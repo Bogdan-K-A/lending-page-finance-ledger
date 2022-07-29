@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+
+.header__navbar {
+  position: fixed;
+
+  width: 1360px;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin-bottom: -70px;
+  padding: 0 28px;
+  z-index: 5;
+}
+
+.active {
+  @extend .header__navbar;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.header__navbar_list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header__navbar_logo_img {
+  margin-right: 10px;
+}
+
+.header__navbar_logo,
+.header__navbar_logo span {
+  display: flex;
+  color: $light-background;
+
+  font-size: 35px;
+  line-height: 1.21;
+  transition: 300ms;
+}
+
+.header__navbar_logo span {
+  color: $primary-background-color;
+  margin-right: 10px;
+}
+
+.header__navbar_logo:hover {
+  transform: scale(1.05);
+}
