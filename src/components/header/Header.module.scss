@@ -14,7 +14,7 @@
 
 .active {
   @extend .header__navbar;
-  background: rgba(0, 0, 0, 0.4);
+  background: $header-color;
 }
 
 .header__navbar_list {
@@ -30,6 +30,8 @@
 .header__navbar_logo,
 .header__navbar_logo span {
   display: flex;
+  align-items: center;
+
   color: $light-background;
 
   font-size: 35px;
@@ -44,4 +46,33 @@
 
 .header__navbar_logo:hover {
   transform: scale(1.05);
+}
+
+@media screen and (max-width: 767px) {
+  .header__navbar {
+    width: 320px;
+    display: inline-block;
+    height: 120px;
+    margin-bottom: -120px;
+    padding: 0 23px;
+  }
+
+  // .header__navbar_logo_img {
+  //   margin-right: 5px;
+  // }
+
+  .header__navbar_logo,
+  .header__navbar_logo span {
+    font-size: 32px;
+    line-height: 1.32;
+    margin-right: 5px;
+  }
+
+  .header__navbar_list {
+    max-width: 320px;
+  }
+
+  .header__navbar_list {
+    justify-content: space-between;
+  }
 }

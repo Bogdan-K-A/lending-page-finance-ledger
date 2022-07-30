@@ -16,3 +16,16 @@
 .header__navbar_link:hover {
   border-bottom: 2px solid $primary-background-color;
 }
+
+@media screen and (max-width: 767px) {
+  .header__navbar_link {
+    font-size: 16px;
+    line-height: 1.6;
+
+    padding: 0;
+  }
+
+  .header__navbar_item:not(:last-child) {
+    margin-right: 5px;
+  }
+}

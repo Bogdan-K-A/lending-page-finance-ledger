@@ -4,12 +4,19 @@
   margin-right: 25px;
 }
 
-.footer__svg {
+.footer__svg,
+.team__svg {
   fill: $light-background;
   svg {
     transition: 300ms;
     &:hover {
       fill: $primary-background-color-hover;
     }
+  }
+}
+
+.team__svg {
+  svg:hover {
+    fill: $social-hover-color;
   }
 }

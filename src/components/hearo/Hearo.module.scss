@@ -2,8 +2,8 @@
 
 .hero {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  max-width: 1360px;
+  min-height: 768px;
   padding: 0;
 
   background-color: $mat-color;
@@ -12,7 +12,7 @@
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url(../../assets/images/hearo/hearo.jpg);
+    url(../../assets/images/home/showcase.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -47,4 +47,40 @@
   line-height: 1.67;
 
   color: $secondary-color;
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    max-width: 100%;
+    min-height: 533px;
+
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(../../assets/images/home/showcase.webp);
+  }
+
+  .hearo__title_wrapper {
+    width: 241px;
+    height: 132px;
+    top: 35%;
+    text-align: center;
+  }
+
+  .hero__title {
+    margin-bottom: 24px;
+
+    font-weight: 300;
+    font-size: 52px;
+    line-height: 1.27;
+
+    color: $secondary-color;
+  }
+
+  .hero__text {
+    font-size: 22px;
+    line-height: 1.67;
+  }
 }

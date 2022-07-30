@@ -1,8 +1,7 @@
 import React from 'react'
 import { Button } from '../button/Button'
-// import { CgChevronRight } from 'react-icons/cg'
-import s from './Hearo.module.scss'
 import { SvgSelector } from '../../assets/icons/svgSelector/SvgSelector'
+import s from './Hearo.module.scss'
 
 export const Hearo = () => {
   return (

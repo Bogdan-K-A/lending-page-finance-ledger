@@ -7,7 +7,7 @@ export const Header = ({ navbarLinks }) => {
   const [navbar, setNavbar] = useState(false)
 
   const changeBacground = () => {
-    if (window.scrollY >= 590) {
+    if (window.scrollY >= 70) {
       setNavbar(true)
     } else {
       setNavbar(false)
@@ -21,9 +21,9 @@ export const Header = ({ navbarLinks }) => {
     <header className="container">
       <nav className={navBg}>
         <a href="#home" className={s.header__navbar_logo}>
-          <div className={s.header__navbar_logo_img}>
+          <span className={s.header__navbar_logo_img}>
             <SvgSelector id="logo" />
-          </div>
+          </span>
           <span>Finance</span>Ledger
         </a>
 

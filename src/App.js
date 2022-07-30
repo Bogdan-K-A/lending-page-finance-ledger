@@ -6,12 +6,13 @@ import teamImagesArr from './assets/images/team/teamImagesArr'
 import { Header } from './components/header/Header'
 import { SectionWithImages } from './components/section-with-images/SectionWithImages'
 import { Footer } from './components/footer/Footer'
+
 const navbarLinks = [
-  { url: '#home', title: 'Home' },
-  { url: '#about', title: 'About' },
-  { url: '#cases', title: 'Cases' },
-  { url: '#blog', title: 'Blog' },
-  { url: '#contact', title: 'Contact' },
+  { url: 'home', title: 'Home' },
+  { url: 'about', title: 'About' },
+  { url: 'cases', title: 'Cases' },
+  { url: 'blog', title: 'Blog' },
+  { url: 'contact', title: 'Contact' },
 ]
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
     <>
       <Header navbarLinks={navbarLinks} />
       <main>
-        <Hearo />
         <div className="container">
+          <Hearo />
           <Section imgesUrl={homeImagesArr} id={'people'} type={'green'} />
           <SectionWithImages imgesUrl={casesImagesArr} id={'cases'} />
           <Section imgesUrl={homeImagesArr} id={'blog'} type={'blue'} />

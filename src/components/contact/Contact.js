@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Form } from '../form/Form'
+import { SuccessfulModalForm } from '../successful-modal-form/SuccessfulModalForm'
 import s from './Contact.module.scss'
 
 export const Contact = ({ item }) => {
+  const [activeModal, setActiveModal] = useState(false)
+
   return (
     <>
       <picture id="contact">
@@ -22,8 +25,9 @@ export const Contact = ({ item }) => {
         />
       </picture>
       <div className={s.contact__content}>
-        <Form />
+        <Form setActive={setActiveModal} />
       </div>
+      <SuccessfulModalForm active={activeModal} setActive={setActiveModal} />
     </>
   )
 }

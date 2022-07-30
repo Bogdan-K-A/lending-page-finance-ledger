@@ -10,6 +10,7 @@ export const Section = ({ imgesUrl, id, type }) => {
     <section className={s.section}>
       {imgesUrl.map((item) => {
         if (item.id === id && type === 'green') {
+          ;<div id="about"></div>
           return <About key={item.id} item={item} />
         } else if (item.id === id && type === 'blue') {
           return <Blog key={item.id} item={item} />
