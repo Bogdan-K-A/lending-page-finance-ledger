@@ -27,7 +27,9 @@ export const Contact = ({ item }) => {
       <div className={s.contact__content}>
         <Form setActive={setActiveModal} />
       </div>
-      <SuccessfulModalForm active={activeModal} setActive={setActiveModal} />
+      {activeModal && (
+        <SuccessfulModalForm active={activeModal} setActive={setActiveModal} />
+      )}
     </>
   )
 }

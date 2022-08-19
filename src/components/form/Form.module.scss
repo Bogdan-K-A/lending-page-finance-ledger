@@ -20,6 +20,10 @@
   margin-bottom: 32px;
 }
 
+.form__input_name:hover::placeholder {
+  margin-bottom: 20px;
+}
+
 .form__label {
   margin-bottom: 40px;
 }
