@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 29px;
+
+  border-radius: 5px;
+  background-color: $primary-background-color;
+  color: $light-background;
+  cursor: pointer;
+  fill: $light-background;
+  transition: 300ms;
+
+  svg {
+    width: 9px;
+    height: 18px;
+  }
+}
+
+.btn span {
+  font-size: 16px;
+  line-height: 1.6;
+
+  margin-left: 4px;
+
+  @media screen and (min-width: 786px) {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+// .btn--primary-form {
+//   padding: 8px 285px;
+// }
+
+.btn--primary-form:hover,
+.btn--primary:hover {
+  background-color: $primary-background-color-hover;
+}
+
+.btn--secondary-green,
+.btn--secondary-blue {
+  border: 1px solid white;
+}
+
+.btn--secondary-green:hover {
+  color: $primary-background-color;
+  fill: $primary-background-color;
+  background-color: $light-background;
+}
+
+.btn--secondary-blue {
+  background-color: $secondary-background-color-blue;
+}
+
+.btn--secondary-blue:hover {
+  color: $secondary-background-color-blue;
+  fill: $secondary-background-color-blue;
+  background-color: $light-background;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { TeamItem } from '../team-item/TeamItem'
+import { TeamItem } from './team-item/TeamItem'
 import s from './Team.module.scss'
 
 export const Team = ({ items }) => {

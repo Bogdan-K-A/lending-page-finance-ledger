@@ -1,6 +1,6 @@
 import React from 'react'
 import socialIconsArr from '../../assets/icons/social-icons-arr/socialIconsArr'
-import { SocialItem } from '../social-item/SocialItem'
+import { SocialItem } from '../../shared/social-item/SocialItem'
 import s from './Footer.module.scss'
 export const Footer = () => {
   return (

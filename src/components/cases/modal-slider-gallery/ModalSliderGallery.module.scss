@@ -1,0 +1,87 @@
+@import '../../../styles/variables.scss';
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $header-color;
+  z-index: 1200;
+}
+
+.modal__img {
+  border-radius: 10px;
+  width: 1300px;
+  border: 4px solid white;
+  margin-bottom: 10px;
+}
+
+.modal__img_description {
+  display: flex;
+  justify-content: space-between;
+  color: $light-background;
+}
+
+.modal__container {
+  position: relative;
+  display: flex;
+}
+
+.modal__btn_left,
+.modal__btn_right {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+
+  transform: translateY(-50%);
+  cursor: pointer;
+  fill: $secondary-background-color-lightGray;
+  fill: transparent;
+  padding-top: 375px;
+  padding-bottom: 375px;
+
+  transition: all 300ms ease;
+  svg {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.modal__btn_left {
+  padding-right: 500px;
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.modal__btn_right {
+  padding-left: 500px;
+  left: 53.5%;
+}
+
+.modal__btn_right:hover,
+.modal__btn_left:hover {
+  fill: $secondary-background-color-lightGray;
+  // background-color: $mat-color;
+}
+
+.close_icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 300ms ease;
+
+  cursor: pointer;
+}
+
+.close_icon:hover {
+  background-color: $mat-color;
+  width: 45px;
+  height: 45px;
+}

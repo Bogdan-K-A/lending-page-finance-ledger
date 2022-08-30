@@ -1,22 +1,14 @@
 import React from 'react'
-import { Button } from '../button'
+import { SvgSelector } from '../../assets/icons/svgSelector/SvgSelector'
+import { Button } from '../../shared/button/Button'
+import { Picture } from '../../shared/picture/Picture'
 import s from './About.module.scss'
 
 export const About = ({ item }) => {
   return (
-    <>
-      <picture id="about">
-        <source
-          srcSet={`${item.webp_1x} 1x, ${item.webp_2x} 2x`}
-          media="(minWidth: 1360px)"
-        />
-        <source
-          srcSet={`${item.jpg_1x} 1x, ${item.jpg_2x} 2x`}
-          media="(minWidth: 1360px)"
-        />
+    <div className={s.about} id={'about'}>
+      <Picture item={item} />
 
-        <img src={`${item.webp_1x}`} alt={item.alt} className={s.about__img} />
-      </picture>
       <div className={s.about__content}>
         <p className={s.about__text}>What you are looking for</p>
         <h2 className={s.about__title}>We provide bespoke solutions</h2>
@@ -27,8 +19,11 @@ export const About = ({ item }) => {
           iste maiores deleniti?
         </p>
 
-        <Button type="secondary-green">Read More</Button>
+        <Button type="secondary-green">
+          <SvgSelector id="angle-right" />
+          <span>Read More</span>
+        </Button>
       </div>
-    </>
+    </div>
   )
 }

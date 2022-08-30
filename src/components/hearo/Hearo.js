@@ -1,14 +1,14 @@
 import React from 'react'
-import { Button } from '../button/Button'
+import { Button } from '../../shared/button/Button'
 import { SvgSelector } from '../../assets/icons/svgSelector/SvgSelector'
 import s from './Hearo.module.scss'
 
 export const Hearo = () => {
   return (
-    <section className={s.hero} id="home">
+    <section className={s.hearo} id="home">
       <div className={s.hearo__title_wrapper}>
-        <h1 className={s.hero__title}>The Sky Is The Limit</h1>
-        <span className={s.hero__text}>
+        <h1 className={s.hearo__title}>The Sky Is The Limit</h1>
+        <span className={s.hearo__text}>
           We provide world class financial assistance
         </span>
         <Button type="primary">

@@ -1,27 +1,37 @@
 @import '../../styles/variables.scss';
 
-.about__img {
-  width: 680px;
-  height: 460px;
-
-  max-width: none;
+.about {
+  padding-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    // padding-bottom: 40px;
+  }
 }
 
 .about__content {
-  // width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  padding: 80px 56px 80px 28px;
+  padding: 40px 20px 40px 20px;
 
   background-color: $primary-background-color;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 53px;
+    padding-left: 32px;
+  }
+  @media screen and (min-width: 1360px) {
+    width: 690px;
+    padding: 80px 64px 80px 20px;
+  }
 }
 
 .about__text {
   margin-bottom: 8px;
-  font-size: 20px;
-  line-height: 1.65;
+  font-size: 18px;
+  line-height: 1.66;
   color: $light-background;
 }
 
@@ -35,4 +45,18 @@
   font-weight: 300;
   font-size: 38px;
   line-height: 1.26;
+
+  @media screen and (max-width: 768px) {
+    width: 204px;
+  }
+}
+
+.about__description {
+  font-size: 16px;
+  line-height: 1.6;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.6;
+  }
 }

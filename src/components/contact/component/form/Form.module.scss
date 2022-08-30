@@ -1,0 +1,89 @@
+@import '../../../../styles/variables.scss';
+
+.form {
+  text-align: center;
+
+  &__input_email,
+  &__input_login {
+    display: block;
+    // width: 620px;
+    width: 100%;
+    height: 40px;
+
+    background: #ffffff;
+    border: none;
+    outline: none;
+
+    padding: 0 15px;
+  }
+
+  &__input_email {
+    margin-bottom: 5px;
+  }
+
+  &__input_login:focus + .input__label_login,
+  &__input_login:not(:placeholder-shown) + .input__label_login,
+  &__input_email:focus + .input__label_email,
+  &__input_email:not(:placeholder-shown) + .input__label_email {
+    transform: translateY(-50px);
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.26;
+
+    text-align: center;
+
+    margin-bottom: 32px;
+    color: $primary-color;
+  }
+
+  &__btn {
+    border-radius: 5px;
+    background-color: $primary-background-color;
+    color: $light-background;
+    cursor: pointer;
+    // padding: 8px 285px;
+    padding: 10px 115px;
+
+    border: none;
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__btn:hover {
+    background-color: $primary-background-color-hover;
+  }
+}
+
+.wrapper_input_login {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.wrapper_input_email {
+  position: relative;
+  margin-bottom: 27px;
+}
+
+.input__label_login,
+.input__label_email {
+  position: absolute;
+
+  left: 15px;
+  transform: translateY(-50%);
+  transition: transform 250ms linear;
+  cursor: text;
+  color: $placeholder-color;
+}
+
+.input__label_login {
+  top: 50%;
+}
+
+.input__label_email {
+  top: 28%;
+}

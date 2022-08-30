@@ -1,10 +1,13 @@
 import React from 'react'
-import { Button } from '../button'
+import { SvgSelector } from '../../assets/icons/svgSelector/SvgSelector'
+import { Button } from '../../shared/button'
+import { Picture } from '../../shared/picture/Picture'
+
 import s from './Blog.module.scss'
 
 export const Blog = ({ item }) => {
   return (
-    <>
+    <div className={s.blog} id={'blog'}>
       <div className={s.blog__content}>
         <p className={s.blog__text}>April 16 2020</p>
         <h2 className={s.blog__title}>Blog Post One</h2>
@@ -15,20 +18,12 @@ export const Blog = ({ item }) => {
           iste maiores deleniti?
         </p>
 
-        <Button type="secondary-blue">Read Our Blog</Button>
+        <Button type="secondary-blue">
+          <SvgSelector id="angle-right" />
+          <span>Read Our Blog</span>
+        </Button>
       </div>
-      <picture id="blog">
-        <source
-          srcSet={`${item.webp_1x} 1x, ${item.webp_2x} 2x`}
-          media="(minWidth: 1360px)"
-        />
-        <source
-          srcSet={`${item.jpg_1x} 1x, ${item.jpg_2x} 2x`}
-          media="(minWidth: 1360px)"
-        />
-
-        <img src={`${item.webp_1x}`} alt={item.alt} className={s.blog__img} />
-      </picture>
-    </>
+      <Picture item={item} />
+    </div>
   )
 }

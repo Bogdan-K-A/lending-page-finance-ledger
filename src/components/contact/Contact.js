@@ -1,35 +1,22 @@
 import React, { useState } from 'react'
-import { Form } from '../form/Form'
-import { SuccessfulModalForm } from '../successful-modal-form/SuccessfulModalForm'
+import { Form } from './component/form/Form'
+import { Picture } from '../../shared/picture/Picture'
+import { SuccessfulModalForm } from './component/successful-modal-form/SuccessfulModalForm'
 import s from './Contact.module.scss'
 
 export const Contact = ({ item }) => {
   const [activeModal, setActiveModal] = useState(false)
 
   return (
-    <>
-      <picture id="contact">
-        <source
-          srcSet={`${item.webp_1x} 1x, ${item.webp_2x} 2x`}
-          media="(minWidth: 1360px)"
-        />
-        <source
-          srcSet={`${item.jpg_1x} 1x, ${item.jpg_2x} 2x`}
-          media="(minWidth: 1360px)"
-        />
+    <div className={s.contact} id={'contact'}>
+      <Picture item={item} />
 
-        <img
-          src={`${item.webp_1x}`}
-          alt={item.alt}
-          className={s.contact__img}
-        />
-      </picture>
       <div className={s.contact__content}>
         <Form setActive={setActiveModal} />
       </div>
       {activeModal && (
         <SuccessfulModalForm active={activeModal} setActive={setActiveModal} />
       )}
-    </>
+    </div>
   )
 }

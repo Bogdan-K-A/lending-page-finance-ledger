@@ -1,0 +1,12 @@
+.img {
+  width: 100%;
+
+  // margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    width: 368px;
+  }
+  @media screen and (min-width: 1360px) {
+    width: 670px;
+    height: 460px;
+  }
+}

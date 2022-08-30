@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 import { SvgSelector } from '../../assets/icons/svgSelector/SvgSelector'
-import { NavbarItem } from '../navbar-item/NavbarItem'
+import { NavbarItem } from './navbar-item/NavbarItem'
 import s from './Header.module.scss'
 
 export const Header = ({ navbarLinks }) => {
@@ -19,7 +19,7 @@ export const Header = ({ navbarLinks }) => {
   const navBg = navbar ? s.active : s.header__navbar
 
   return (
-    <header className="container">
+    <header className={s.header}>
       <nav className={navBg}>
         <Link
           // href="#home"

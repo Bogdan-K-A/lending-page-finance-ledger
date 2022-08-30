@@ -1,10 +1,10 @@
 @import '../../styles/variables.scss';
 
-.hero {
-  position: relative;
-  max-width: 1360px;
-  min-height: 768px;
-  padding: 0;
+.hearo {
+  max-width: 100%;
+  min-height: 533px;
+  margin: 0 auto;
+  padding: 142px 0 96px 0;
 
   background-color: $mat-color;
   background-image: linear-gradient(
@@ -12,75 +12,69 @@
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url(../../assets/images/home/showcase.jpg);
+    url(../../assets/images/hearo/mobile_hearo.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
 
-.hearo__title_wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero__title {
-  margin-bottom: 24px;
-
-  font-weight: 300;
-  font-size: 55px;
-  line-height: 1.2;
-
-  color: $secondary-color;
-}
-
-.hero__text {
-  margin-bottom: 32px;
-
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 1.67;
-
-  color: $secondary-color;
-}
-
-@media screen and (max-width: 767px) {
-  .hero {
-    max-width: 100%;
-    min-height: 533px;
+  @media screen and (min-width: 768px) {
+    padding: 408px 0 408px 0;
 
     background-image: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ),
-      url(../../assets/images/home/showcase.webp);
+      url(../../assets/images/hearo/tablet_hearo.jpg);
   }
 
-  .hearo__title_wrapper {
-    width: 241px;
-    height: 132px;
-    top: 35%;
-    text-align: center;
+  @media screen and (min-width: 1360px) {
+    padding: 281px 0 281px 0;
+
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(../../assets/images/hearo/desctop_hearo.jpg);
   }
 
-  .hero__title {
-    margin-bottom: 24px;
+  &__title_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 20px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
 
     font-weight: 300;
     font-size: 52px;
     line-height: 1.27;
-
+    text-align: center;
     color: $secondary-color;
+
+    @media screen and (min-width: 768px) {
+      font-size: 55px;
+      line-height: 1.2;
+
+      margin-bottom: 24px;
+    }
   }
 
-  .hero__text {
+  &__text {
+    margin-bottom: 24px;
+
     font-size: 22px;
     line-height: 1.67;
+    text-align: center;
+
+    color: $secondary-color;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
   }
 }

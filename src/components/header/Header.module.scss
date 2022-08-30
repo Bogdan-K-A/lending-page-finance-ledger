@@ -1,79 +1,82 @@
 @import '../../styles/variables.scss';
 
-.header__navbar {
+.header {
   position: fixed;
+  width: 100%;
+  text-align: center;
 
-  width: 1360px;
-  display: flex;
-  align-items: center;
-  height: 70px;
-  margin-bottom: -70px;
-  padding: 0 28px;
+  // margin-bottom: 20px;
+
   z-index: 5;
+}
+
+.header__navbar {
+  padding: 27px 20px 20px 20px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  @media screen and (min-width: 1360px) {
+    padding: 20px 28px 20px 28px;
+  }
+
+  &_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_logo_img {
+    margin-right: 5px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 10px;
+    }
+  }
+
+  &_logo,
+  &_logo span {
+    display: inline-block;
+    text-align: center;
+
+    font-size: 32px;
+    line-height: 1.21;
+
+    color: $light-background;
+
+    cursor: pointer;
+    transition: 300ms;
+
+    @media screen and (min-width: 768px) {
+      font-size: 35px;
+    }
+  }
+
+  &_logo {
+    margin-bottom: 9px;
+  }
+
+  &_logo span {
+    margin-right: 5px;
+    color: $primary-background-color;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 10px;
+    }
+  }
+
+  &_logo:hover {
+    transform: scale(1.05);
+  }
 }
 
 .active {
   @extend .header__navbar;
   background: $header-color;
-}
-
-.header__navbar_list {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.header__navbar_logo_img {
-  margin-right: 10px;
-}
-
-.header__navbar_logo,
-.header__navbar_logo span {
-  display: flex;
-  align-items: center;
-
-  color: $light-background;
-  cursor: pointer;
-
-  font-size: 35px;
-  line-height: 1.21;
-  transition: 300ms;
-}
-
-.header__navbar_logo span {
-  color: $primary-background-color;
-  margin-right: 10px;
-}
-
-.header__navbar_logo:hover {
-  transform: scale(1.05);
-}
-
-@media screen and (max-width: 767px) {
-  .header__navbar {
-    width: 320px;
-    display: inline-block;
-    height: 120px;
-    margin-bottom: -120px;
-    padding: 0 23px;
-  }
-
-  // .header__navbar_logo_img {
-  //   margin-right: 5px;
-  // }
-
-  .header__navbar_logo,
-  .header__navbar_logo span {
-    font-size: 32px;
-    line-height: 1.32;
-    margin-right: 5px;
-  }
-
-  .header__navbar_list {
-    max-width: 320px;
-  }
-
-  .header__navbar_list {
-    justify-content: space-between;
-  }
 }

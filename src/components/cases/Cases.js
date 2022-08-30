@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { CasesItem } from '../cases-item/CasesItem'
-import { ModalSliderGallery } from '../modal-slider-gallery/ModalSliderGallery'
+import { CasesItem } from './cases-item/CasesItem'
+import { ModalSliderGallery } from './modal-slider-gallery/ModalSliderGallery'
 
 import s from './Cases.module.scss'
 
@@ -10,7 +10,7 @@ export const Cases = ({ items }) => {
 
   const onClickImg = (el) => {
     setShowModal(true)
-    setModalImg(el.webp_1x, el.alt, el.id)
+    setModalImg(el.jpg_1x, el.alt, el.id)
   }
 
   const setModalImg = (src, alt, id) => {

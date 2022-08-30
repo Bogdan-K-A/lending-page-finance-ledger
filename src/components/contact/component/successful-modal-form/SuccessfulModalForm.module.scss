@@ -1,0 +1,42 @@
+@import '../../../../styles/variables.scss';
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: scale(0);
+  z-index: 5;
+}
+
+.active {
+  @extend .modal;
+  transform: scale(1);
+}
+
+.modal__content {
+  padding: 20px 60px 20px 20px;
+  background-color: $light-background;
+  border-radius: 10px;
+}
+
+.modal__back_btn {
+  background-color: transparent;
+  border: none;
+  color: $primary-background-color;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.modal__title,
+.modal__text {
+  margin-bottom: 15px;
+}
