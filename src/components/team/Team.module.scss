@@ -1,8 +1,11 @@
 @import '../../styles/variables.scss';
 
-.team {
-  // background-color: $light-background;
+.section {
   padding: 20px 0;
+
+  @media screen and (min-width: 1360px) {
+    padding: 40px 0;
+  }
 }
 
 .team__content {
@@ -51,13 +54,11 @@
 
 .team__list {
   display: grid;
-  // grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
-  padding: 0 20px;
+  padding: 0 25px;
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 17px;
-    padding: 0 32px;
   }
 }

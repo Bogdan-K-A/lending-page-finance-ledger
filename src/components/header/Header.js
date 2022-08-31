@@ -21,25 +21,26 @@ export const Header = ({ navbarLinks }) => {
   return (
     <header className={s.header}>
       <nav className={navBg}>
-        <Link
-          // href="#home"
-          to={'home'}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={s.header__navbar_logo}
-        >
-          <span className={s.header__navbar_logo_img}>
-            <SvgSelector id="logo" />
-          </span>
-          <span>Finance</span>Ledger
-        </Link>
+        <div className={s.nav_container}>
+          <Link
+            to={'home'}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className={s.header__navbar_logo}
+          >
+            <span className={s.header__navbar_logo_img}>
+              <SvgSelector id="logo" />
+            </span>
+            <span>Finance</span>Ledger
+          </Link>
 
-        <ul className={s.header__navbar_list}>
-          {navbarLinks.map((item) => (
-            <NavbarItem item={item} key={item.title} />
-          ))}
-        </ul>
+          <ul className={s.header__navbar_list}>
+            {navbarLinks.map((item) => (
+              <NavbarItem item={item} key={item.title} />
+            ))}
+          </ul>
+        </div>
       </nav>
     </header>
   )

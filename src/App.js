@@ -1,6 +1,6 @@
 import { Header } from './components/header/Header'
-import { Footer } from './components/footer/Footer'
 import { Main } from './main/Main'
+import { Footer } from './components/footer/Footer'
 
 const navbarLinks = [
   { url: 'home', title: 'Home' },
@@ -15,7 +15,6 @@ function App() {
     <>
       <Header navbarLinks={navbarLinks} />
       <Main />
-
       <Footer />
     </>
   )

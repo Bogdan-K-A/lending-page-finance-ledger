@@ -1,7 +1,6 @@
 @import '../../styles/variables.scss';
 
-.cases {
-  // background-color: $light-background;
+.section {
   padding: 20px 0;
   @media screen and (min-width: 1360px) {
     padding: 40px 0;
@@ -48,16 +47,14 @@
   display: grid;
 
   grid-gap: 8px;
-  padding: 0 20px;
+  padding: 0 25px;
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 18px;
-    padding: 0 32px;
   }
 
   @media screen and (min-width: 1360px) {
     grid-gap: 22px;
-    padding: 0 28px;
   }
 }

@@ -1,11 +1,9 @@
 @import '../../styles/variables.scss';
 
 .about {
-  padding-bottom: 20px;
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
-    // padding-bottom: 40px;
   }
 }
 
@@ -22,6 +20,7 @@
     padding-right: 53px;
     padding-left: 32px;
   }
+
   @media screen and (min-width: 1360px) {
     width: 690px;
     padding: 80px 64px 80px 20px;

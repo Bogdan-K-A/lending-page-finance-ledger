@@ -1,9 +1,7 @@
 @import '../../styles/variables.scss';
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 
   padding: 20px 0;
 
@@ -11,8 +9,6 @@
 }
 
 .footer__text {
-  //   height: 110px;
-
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;

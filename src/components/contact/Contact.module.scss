@@ -1,15 +1,8 @@
 @import '../../styles/variables.scss';
 
 .contact {
-  // перееместить в секцию
-  padding-top: 20px;
-  justify-content: center;
-
   @media screen and (min-width: 768px) {
     display: flex;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1359px) {
-    padding-bottom: 40px;
   }
 }
 

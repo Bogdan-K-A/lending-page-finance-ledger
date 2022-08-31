@@ -1,4 +1,22 @@
-// .section {
-//   display: flex;
-//   // padding: 40px 0;
-// }
+.section {
+  padding: 20px 0;
+
+  @media screen and (min-width: 1360px) {
+    padding: 40px 0;
+  }
+}
+
+.section_bottom_padding {
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 1360px) {
+    padding-bottom: 40px;
+  }
+}
+.section_top_padding {
+  padding-top: 20px;
+
+  @media screen and (min-width: 1360px) {
+    padding-top: 40px;
+  }
+}

@@ -7,8 +7,10 @@
 .footer__svg,
 .team__svg {
   fill: $light-background;
+
   svg {
     transition: 300ms;
+
     &:hover {
       fill: $primary-background-color-hover;
     }
